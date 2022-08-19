@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: policy-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: policyservice
+  template:
+    metadata:
+      labels:
+        app: policyservice
+    spec:
+      containers:
+        - name: policyservice
+          image: ax9587/policysimservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: policy-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: policyservice
+  ports:
+  - name: policyservice
+    protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: policynpservice-srv
+spec:
+  type: NodePort
+  selector:
+    app: policyservice
+  ports:
+    - name: policyservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

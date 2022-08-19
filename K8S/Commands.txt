@@ -1,0 +1,54 @@
+I.RabbitMQ
+
+kubectl apply -f rabbitmq-depl.yaml
+kubectl get services
+kubectl get deployments
+kubectl get pods
+localhost:15672
+guest/g
+
+II.Platforms
+
+docker build -t ax9587/platformservice
+docker push ax9587/platformservice
+kubectl apply -f platforms-depl.yaml
+
+kubectl get namespace
+kubectl get pods --namespace=ingress-nginx 
+kubectl get services   //service ip/ports etc
+
+windows/system32/drivers/etc hosts
+127.0.0.1 ax.com
+
+III.Commands
+docker build -t ax9587/commandservice .
+docker push ax9587/commandservice
+kubectl apply -f commands-depl.yaml
+kubectl delete deployment commands-depl
+
+IV.nginx
+kubectl create namespace ingress-nginx
+kubectl apply -f ingress-srv.yaml --namespace=ingress-nginx
+kubectl get pods --namespace=ingress-nginx 
+
+kubectl apply -f ingress-srv.yaml
+
+local-pvc: local-persistent volumn claims
+
+kubectl apply -f local-pvc.yaml
+kubectl get pvc
+
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="xxxxxx"
+localhost,1433
+
+docker build -t 
+docker push
+
+kubectl rollout restart deployment platform-deployment
+kubectl delete deployment platform-deployment
+
+
+
+
+
+

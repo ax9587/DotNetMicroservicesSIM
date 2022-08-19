@@ -1,0 +1,11 @@
+<nb-card>
+    <nb-card-header><h3>{{product.name}}</h3></nb-card-header>
+    <nb-card-body>
+        <p><img src={{product.image}} /></p>
+        {{product.description}}
+        <ngx-coverlist [covers]="product.covers"></ngx-coverlist>
+        <a [routerLink]="['/pages/product/product']" [queryParams]="{ productCode: product.code }">
+            <button type="submit" nbButton status="primary">Buy</button>
+        </a>
+    </nb-card-body>
+</nb-card>

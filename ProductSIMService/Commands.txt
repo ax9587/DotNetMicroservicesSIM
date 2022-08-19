@@ -1,0 +1,14 @@
+kubectl get namespace
+kubectl get pods --namespace=ingress-nginx 
+kubectl get services   //service ip/ports etc
+
+I.SQL
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet restore
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+II.docker/Kuber
+docker build -t ax9587/productsimservice .
+docker push ax9587/productsimservice
+

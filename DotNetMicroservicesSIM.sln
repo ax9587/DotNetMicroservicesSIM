@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService", "AuthService\AuthService.csproj", "{D4978EBD-B128-4B45-B60E-D91EAC21873A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6AB993C0-657F-4E49-8991-7131F5E9B63D}"
+	ProjectSection(SolutionItems) = preProject
+		K8S\auth-depl.yaml = K8S\auth-depl.yaml
+		K8S\chat-depl.yaml = K8S\chat-depl.yaml
+		cluster_role_binding.yaml = cluster_role_binding.yaml
+		K8S\dashboard-depl.yaml = K8S\dashboard-depl.yaml
+		K8S\elastic-depl.yaml = K8S\elastic-depl.yaml
+		K8S\elasticsearch.yaml.xx = K8S\elasticsearch.yaml.xx
+		K8S\ingress-srv.yaml = K8S\ingress-srv.yaml
+		K8S\kibana-depl.yaml = K8S\kibana-depl.yaml
+		K8S\payment-depl.yaml = K8S\payment-depl.yaml
+		K8S\policy-depl.yaml = K8S\policy-depl.yaml
+		K8S\policy-search-depl.yaml = K8S\policy-search-depl.yaml
+		K8S\postgres-configmap.yaml = K8S\postgres-configmap.yaml
+		K8S\postgres-deployment.yaml = K8S\postgres-deployment.yaml
+		K8S\postgres-service.yaml = K8S\postgres-service.yaml
+		K8S\postgres-storage.yaml = K8S\postgres-storage.yaml
+		K8S\pricing-depl.yaml = K8S\pricing-depl.yaml
+		K8S\product-depl.yaml = K8S\product-depl.yaml
+		K8S\product-nodeport-srv.yaml = K8S\product-nodeport-srv.yaml
+		K8S\rabbitmq-depl.yaml = K8S\rabbitmq-depl.yaml
+		README.md = README.md
+		Service_Account.yaml = Service_Account.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductSIMService", "ProductSIMService\ProductSIMService.csproj", "{2A6AB374-9D7C-439D-A301-6692FC9EB459}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricingSIMService", "PricingSIMService\PricingSIMService.csproj", "{9E5C5B33-BA27-4072-8A8E-C7B28CF93901}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicySIMService", "PolicySIMService\PolicySIMService.csproj", "{8EF87719-947A-4C1B-B7BC-7F1E5A265075}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicySearchSIMService", "PolicySearchSIMService\PolicySearchSIMService.csproj", "{D3F8CED2-8DD4-41D4-8262-4E92CFB1DA59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentSIMService", "PaymentSIMService\PaymentSIMService.csproj", "{F46EB99D-0629-4EE7-9D7B-9F82D6D78CE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DashboardSIMService", "DashboardSIMService\DashboardSIMService.csproj", "{5BC1EB58-9912-4EE5-89EF-9C576C5288E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSIMService", "ChatSIMService\ChatSIMService.csproj", "{C28159DC-64E8-4CFF-A899-1D00EE39875B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4978EBD-B128-4B45-B60E-D91EAC21873A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4978EBD-B128-4B45-B60E-D91EAC21873A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4978EBD-B128-4B45-B60E-D91EAC21873A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4978EBD-B128-4B45-B60E-D91EAC21873A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6AB374-9D7C-439D-A301-6692FC9EB459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6AB374-9D7C-439D-A301-6692FC9EB459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6AB374-9D7C-439D-A301-6692FC9EB459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6AB374-9D7C-439D-A301-6692FC9EB459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5C5B33-BA27-4072-8A8E-C7B28CF93901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5C5B33-BA27-4072-8A8E-C7B28CF93901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5C5B33-BA27-4072-8A8E-C7B28CF93901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5C5B33-BA27-4072-8A8E-C7B28CF93901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF87719-947A-4C1B-B7BC-7F1E5A265075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF87719-947A-4C1B-B7BC-7F1E5A265075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF87719-947A-4C1B-B7BC-7F1E5A265075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF87719-947A-4C1B-B7BC-7F1E5A265075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F8CED2-8DD4-41D4-8262-4E92CFB1DA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F8CED2-8DD4-41D4-8262-4E92CFB1DA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F8CED2-8DD4-41D4-8262-4E92CFB1DA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F8CED2-8DD4-41D4-8262-4E92CFB1DA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46EB99D-0629-4EE7-9D7B-9F82D6D78CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46EB99D-0629-4EE7-9D7B-9F82D6D78CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46EB99D-0629-4EE7-9D7B-9F82D6D78CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46EB99D-0629-4EE7-9D7B-9F82D6D78CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC1EB58-9912-4EE5-89EF-9C576C5288E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC1EB58-9912-4EE5-89EF-9C576C5288E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC1EB58-9912-4EE5-89EF-9C576C5288E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC1EB58-9912-4EE5-89EF-9C576C5288E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28159DC-64E8-4CFF-A899-1D00EE39875B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28159DC-64E8-4CFF-A899-1D00EE39875B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28159DC-64E8-4CFF-A899-1D00EE39875B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28159DC-64E8-4CFF-A899-1D00EE39875B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EE96CFB-B280-442F-BE96-FA7B0023EB6D}
+	EndGlobalSection
+EndGlobal

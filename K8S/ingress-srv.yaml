@@ -1,0 +1,77 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: ax.com
+      http:
+        paths:
+          - path: /api/products
+            pathType: Prefix
+            backend:
+              service:
+                name: product-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/user
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-clusterip-srv
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: chat-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/pricing
+            pathType: Prefix
+            backend:
+              service:
+                name: pricing-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/offers
+            pathType: Prefix
+            backend:
+              service:
+                name: policy-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/policies
+            pathType: Prefix
+            backend:
+              service:
+                name: policy-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/PolicySearch
+            pathType: Prefix
+            backend:
+              service:
+                name: policy-search-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/dashboard
+            pathType: Prefix
+            backend:
+              service:
+                name: dashboard-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/payment
+            pathType: Prefix
+            backend:
+              service:
+                name: payment-clusterip-srv
+                port:
+                  number: 80         
+
+              

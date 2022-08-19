@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productservice
+  template:
+    metadata:
+      labels:
+        app: productservice
+    spec:
+      containers:
+        - name: productservice
+          image: ax9587/productsimservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: productservice
+  ports:
+  - name: productservice
+    protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: productnpservice-srv
+spec:
+  type: NodePort
+  selector:
+    app: productservice
+  ports:
+    - name: productservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

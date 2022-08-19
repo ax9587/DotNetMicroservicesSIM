@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card>
+        <nb-card-header><h3>Fill information about Policy Holder</h3></nb-card-header>
+        <nb-card-body>
+          <form class="form-horizontal" [formGroup]="policyForm" >
+            <div class="form-group row">
+              <label for="inputfirstName" class="col-sm-3 form-control-label">First Name:</label>
+              <div class="col-sm-9">
+                <input type="text"  nbInput fullWidth id="inputfirstName" placeholder="First Name" formControlName="firstName">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputlastName" class="col-sm-3 form-control-label">LastName:</label>
+                <div class="col-sm-9">
+                  <input type="text"  nbInput fullWidth id="inputlastName" placeholder="Last Name" formControlName="lastName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputtaxId" class="col-sm-3 form-control-label">Tax id:</label>
+                <div class="col-sm-9">
+                  <input type="text"  nbInput fullWidth id="inputtaxId" placeholder="Tax id" formControlName="taxId">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputcountry" class="col-sm-3 form-control-label">Country:</label>
+                <div class="col-sm-9">
+                  <select required class="form-control"  formControlName="country">
+                    <option *ngFor="let c of countries" [ngValue]="c">
+                        {{ c }}
+                    </option> 
+                  </select> 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputzipCode" class="col-sm-3 form-control-label">Zip Code:</label>
+                <div class="col-sm-9">
+                  <input type="text"  nbInput fullWidth id="inputzipCode" placeholder="Zip Code" formControlName="zipCode">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputcity" class="col-sm-3 form-control-label">City:</label>
+                <div class="col-sm-9">
+                  <input type="text"  nbInput fullWidth id="inputcity" placeholder="City" formControlName="city">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputstreet" class="col-sm-3 form-control-label">Street:</label>
+                <div class="col-sm-9">
+                  <input type="text"  nbInput fullWidth id="inputstreet" placeholder="Street" formControlName="street">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 margin-top-10">
+                    <div class="d-flex flex-row-reverse">
+                        <div class="p-2">
+                            <button type="submit" nbButton status="warning" (click)="postPolicy()">Confirm
+                            </button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>

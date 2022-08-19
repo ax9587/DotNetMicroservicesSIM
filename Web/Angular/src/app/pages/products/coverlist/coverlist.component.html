@@ -1,0 +1,23 @@
+<nb-card>
+    <nb-card-body>
+<div class="table-responsive">
+    <table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Risk</th>
+        <th>Sum insured</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cover of covers; let i = index" [attr.data-index]="i">
+        <th scope="row">{{i}}</th>
+        <td>{{cover.name}}</td>
+        <td >{{cover.sumInsured}} <span *ngIf="cover.sumInsured">EUR</span></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+</nb-card-body>
+</nb-card>
